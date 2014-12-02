@@ -16,8 +16,6 @@ except LookupError:
     print("Could not understand audio")
 
 
-jenkins_instance = Jenkins('http://localhost:8080')
-
-jenkins_instance = Jenkins('http://localhost:8080')
+jenkins_instance = Jenkins('http://65.50.13.61:8080')
 
 jenkins_instance.build_job(user_command)
