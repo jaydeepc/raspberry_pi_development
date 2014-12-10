@@ -3,17 +3,19 @@ import pyttsx
 import datetime
 
 engine = pyttsx.init()
-engine.setProperty('rate', 150)
+engine.setProperty('rate', 250)
 
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[15].id)
+engine.setProperty('voice', voices[2].id)
 
 user_command = ""
 WORDS = {
-    "hi": "Hello, Sir",
+    "root": "Yes, Sir?",
     "build": "Sure Sir, just give me a second.",
     "goodbye": "Good bye, sir. Let me know when you need me",
-    "what is the time now": datetime.datetime.now().strftime('%I:%M%p').lstrip('0')
+    "what is the time now": datetime.datetime.now().strftime('%I:%M%p').lstrip('0'),
+    "who are you": "Hello. My name is Root. I am currently working as a QA helper",
+    "who is saanvi": "Sir, your daughter's name is Saanvi."
 }
 
 while user_command is "":
@@ -36,3 +38,6 @@ while user_command is "":
 
     engine.runAndWait()
     user_command = "" if user_command <> "goodbye" else user_command
+
+def introduce():
+    return "Hello. My name is Glubi. I am currently working as a QA helper."
