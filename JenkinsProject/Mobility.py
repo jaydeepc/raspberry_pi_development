@@ -15,41 +15,41 @@ def kill():
 
 
 def go_forward(tf):
-    init()
+    # init()
     gpio.output(7, True)
     gpio.output(13, True)
     time.sleep(tf)
     gpio.output(7, False)
     gpio.output(13, False)
-    kill()
+    # kill()
 
 
 def go_backward(tf):
-    init()
+    # init()
     gpio.output(11, True)
     gpio.output(15, True)
     time.sleep(tf)
     gpio.output(11, False)
     gpio.output(15, False)
-    kill()
+    # kill()
 
 
 def turn_right(tf):
-    init()
+    # init()
     gpio.output(7, True)
     gpio.output(15, True)
     time.sleep(tf)
     gpio.output(7, False)
     gpio.output(15, False)
-    kill()
+    # kill()
 
 
 def turn_left(tf):
-    init()
+    # init()
     gpio.output(13, True)
     gpio.output(11, True)
     time.sleep(tf)
     gpio.output(13, False)
     gpio.output(11, False)
     time.sleep(tf)
-    kill()
+    # kill()
