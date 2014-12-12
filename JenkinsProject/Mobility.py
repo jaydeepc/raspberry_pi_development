@@ -19,8 +19,8 @@ def go_forward(tf):
     gpio.output(7, True)
     gpio.output(13, True)
     time.sleep(tf)
-    # gpio.output(7, False)
-    # gpio.output(13, False)
+    gpio.output(7, False)
+    gpio.output(13, False)
     # kill()
 
 
@@ -29,8 +29,8 @@ def go_backward(tf):
     gpio.output(11, True)
     gpio.output(15, True)
     time.sleep(tf)
-    # gpio.output(11, False)
-    # gpio.output(15, False)
+    gpio.output(11, False)
+    gpio.output(15, False)
     # kill()
 
 
