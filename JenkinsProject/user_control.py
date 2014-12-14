@@ -1,15 +1,18 @@
 import Mobility as move
+import Tkinter as tk
 
-key_press = ""
-while key_press is not "t":
-    key_press = raw_input()
+
+def key_input(event):
+    move.init()
+    print 'Key:', event.char
+    key_press = event.char
+    sleep_time = 0.03
     if key_press.lower() == 'w':
-        move.kill()
-        move.init()
-        move.go_forward(0)
+        move.go_forward(sleep_time)
     elif key_press.lower() == 's':
-        move.kill()
-        move.init()
-        move.go_backward(0)
+        move.go_backward(sleep_time)
 
-move.kill()
+
+command = tk.Tk()
+command.bind('<KeyPress>', key_input)
+command.mainloop()
