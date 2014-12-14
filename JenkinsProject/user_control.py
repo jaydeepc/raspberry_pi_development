@@ -10,9 +10,9 @@ def key_input(event):
     if key_press.lower() == 'w':
         move.go_forward(sleep_time)
     elif key_press.lower() == 's':
-        move.turn_right(sleep_time)
-    elif key_press.lower() == 'd':
         move.go_backward(sleep_time)
+    elif key_press.lower() == 'd':
+        move.turn_right(sleep_time)
     elif key_press.lower() == 'a':
         move.turn_left(sleep_time)
 
