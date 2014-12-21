@@ -19,7 +19,7 @@ while word is "":
         print "No Command"
 
     if word.lower() in WORDS.keys():
-        call(["mpg123", "http://www.translate.google.com/translate_tts?tl=en&q={0}&key=AIzaSyDkKEm081DUEZFXiW1pFx6gN1JHNqg1qus&".format(WORDS.get(word))])
+        call(["mpg123", "http://www.translate.google.com/translate_tts?tl=en&q={0}&key=AIzaSyDkKEm081DUEZFXiW1pFx6gN1JHNqg1qus&".format(WORDS.get(word).replace(" ", "%20"))])
     else:
         call(["say", "Sorry sir, I can not understand you!"])
 
